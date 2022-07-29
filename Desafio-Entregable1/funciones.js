@@ -1,4 +1,4 @@
-function funcionPrincipal() {
+const funcionPrincipal = () => {
     let ingreseNumero = prompt(opcionesPrincipal);
     while (ingreseNumero != "3") {
         switch (ingreseNumero) {
@@ -12,7 +12,7 @@ function funcionPrincipal() {
     }
 }
 
-function funcionDesayuno() {
+const funcionDesayuno = () => {
     let ingreseNumero = prompt(opcionesDesayuno);
     while (ingreseNumero != "8") {
         switch (ingreseNumero) {
@@ -56,7 +56,7 @@ function funcionDesayuno() {
 }
 
 
-function funcionAlmuerzo() {
+const funcionAlmuerzo = () => {
     let ingreseNumero = prompt(opcionesAlmuerzo);
     while (ingreseNumero != "8") {
         switch (ingreseNumero) {
@@ -99,7 +99,7 @@ function funcionAlmuerzo() {
     funcionFinal();
 }
 
-function funcionFinal() {
+const funcionFinal = () => {
     let ingreseNumero = prompt(opcionesFinales);
     switch (ingreseNumero) {
         case "1":
