@@ -1,6 +1,5 @@
 const funcionPrincipal = () => {
     let ingreseNumero = prompt(opcionesPrincipal);
-    while (ingreseNumero != "3") {
         switch (ingreseNumero) {
         case "1":
             funcionDesayuno();
@@ -8,8 +7,11 @@ const funcionPrincipal = () => {
         case "2":
             funcionAlmuerzo();
             break;
-        }
-    }
+        case "3":
+            break;
+        default:
+            alert(mensajeError);
+        }   
 }
 
 const funcionDesayuno = () => {
@@ -106,11 +108,13 @@ const funcionFinal = () => {
             funcionPrincipal();
             break;
         case "2":
+            cuentaTotal = cuentaDesayunoSuma + cuentaAlmuerzoSuma;
+            alert(mensajeCuentaDesayuno + cuentaDesayunoSuma + "\n" + 
+            mensajeCuentaAlmuerzo + cuentaAlmuerzoSuma + "\n" +
+            mensajeCuentaTotal + cuentaTotal); 
             break;
+        default:
+            alert(mensajeError);
     }   
-    cuentaTotal = cuentaDesayunoSuma + cuentaAlmuerzoSuma;
-    alert(mensajeCuentaDesayuno + cuentaDesayunoSuma + "\n" + 
-    mensajeCuentaAlmuerzo + cuentaAlmuerzoSuma + "\n" +
-    mensajeCuentaTotal + cuentaTotal); 
 }
 
