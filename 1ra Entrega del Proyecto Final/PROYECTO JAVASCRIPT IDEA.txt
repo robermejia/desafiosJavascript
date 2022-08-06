@@ -1,0 +1,28 @@
+- Aplicación de pedidos de comida
+=======================================================================
+NOTA: MOSTRAR TODO EN EL SIDER A MEDIDA QUE SE VA COMPRANDO.(POSTERIOR)
+=======================================================================
+1.INGRESAR DATOS DEL CLIENTE (POSTERIOR)
+-Nombre
+-Apellido
+-Dirección
+-Email
+-Dni
+-Telefono
+-+18
+
+2.MOSTRAR SERVICIOS DE COMIDA INTEGRALES.
+ELEGIR UN NÚMERO DEL 1 AL 5.(PRIMER PASO)
+-Servicio 1 Desayuno, Comidas
+-Servicio 2 Desayuno, Comidas
+-Servicio 3 Desayuno, Comidas
+-Servicio 4 Desayuno, Comidas
+-Servicio 5 Desayuno, Comidas
+
+4.AGREGAR O ELIMINAR UN PLATO AL CARRITO.(SLIDER)
+
+-PLATOS ELEGIDOS.
+-TOTAL A PAGAR.
+
+6.MOSTRAR DATOS DEL CLIENTE + LISTA DE PLATOS + 
+CON EL TOTAL A PAGAR. (POSTERIOR)
