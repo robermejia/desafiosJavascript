@@ -12,12 +12,11 @@ body {
 }
 
 /* ////////////////////////////// ESTILOS ////////////////////////////// */
-.cover-container{
-  height: 83vh !important;
+.contenido{
+  display: flex !important;
+  align-items: center !important;
+  height: 70vh !important;
 }
 
-.px-3{
-  position: relative;
-  top: 25%;
-}
+
 
