@@ -12,7 +12,7 @@ function mostrarPlatos (array) {
                                 <p class="card-text">${item.descripcion}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="#" id="botonAgregar${item.id}" class="btn btn-primary my-2">Añadir al carrito</a>
+                                        <button type="button" id="botonAgregar${item.id}" class="btn btn-primary">Agregar al carrito</button>
                                     </div>
                                     <small class="text-muted">S./${item.precio}</small>
                                 </div>
