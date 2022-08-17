@@ -7,4 +7,4 @@ const $contadorCarrito1 = document.getElementById('contadorCarrito1');
 const $contadorCarrito2 = document.getElementById('contadorCarrito2');
 const $precioTotal = document.getElementById('precioTotal');
 
-const $tipoDeConsumo = document.getElementsByClassName('form-select');
+const $tipoDeConsumo = document.getElementById('seleccionTipoDeConsumo');

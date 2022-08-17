@@ -27,14 +27,14 @@ function mostrarPlatos (array) {
     })
 }
 
-/* ////////////////////////////// FILTRO NO ME FUNCIONO ////////////////////////////// */
-// $tipoDeConsumo.addEventListener('change',()=>{
-//     if($tipoDeConsumo.value == 'all'){ 
-//         mostrarProductos(stockPlatos)
-//     }else{
-//         mostrarProductos(stockPlatos.filter(item=> item.tipo == $tipoDeConsumo.value))
-//     }
-// })
+/* ////////////////////////////// FILTRO ////////////////////////////// */
+$tipoDeConsumo.addEventListener('change',()=>{
+    if($tipoDeConsumo.value == 'all'){ 
+        mostrarPlatos(stockPlatos)
+    }else{
+        mostrarPlatos(stockPlatos.filter(item=> item.tipo == $tipoDeConsumo.value))
+    }
+})
 /* //////////////////////////////  ////////////////////////////// */ 
 
 function agregarAlCarrito (id) {
