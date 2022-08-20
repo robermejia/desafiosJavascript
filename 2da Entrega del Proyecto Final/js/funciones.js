@@ -87,7 +87,9 @@ function mostrarEnCarrito (platoAgregar) {
 function actualizarCarrito ()   {
     $contadorCarrito1.innerText = carritoDeCompras.reduce((acc,el) => acc + el.cantidad, 0)
     $contadorCarrito2.innerText = carritoDeCompras.reduce((acc,el) => acc + el.cantidad, 0)
-    $precioTotal.innerText = carritoDeCompras.reduce((acc,el) => acc + ((el.precio + 0.18) * el.cantidad), 0)
-    $igv.innerText = 0.18
+    $precioTotal.innerText = carritoDeCompras.reduce((acc,el) => acc + (el.precio * el.cantidad), 0)
+    // Me aparece muchos decimales a la tercera suma
+    // $precioTotal.innerText = carritoDeCompras.reduce((acc,el) => acc + ((el.precio + 0.18) * el.cantidad), 0)
+    // $igv.innerText = 0.18
    
 }
