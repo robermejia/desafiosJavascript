@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/comidas.css">
+    <!--  LIBRERÍAS  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--  ARCHIVOS  -->
+    <script defer src="js/login.js"></script>
+    <script defer src="js/libreria.js"></script>
+    <script defer src="js/platos.js"></script>
+    <script defer src="js/variables.js"></script>
+    <script defer src="js/funciones.js"></script>
+</head>
+
+<body>
+    <div class="container py-3 fixed-top header-personalizado">
+        <!--  PRICING  -->
+        <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94"
+                        role="img">
+                        <title>Bootstrap</title>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <span class="fs-4">Platos Típicos</span>
+                </a>
+
+                <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                    <form class="d-flex mx-5" role="search">
+                        <input class="form-control me-2" id="buscar" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="index.html">Inicio</a>
+
+                    <button class="btn btn-primary" type="button" id="contadorCarrito" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+                        <i class="bi bi-cart"></i><span id="contadorCarrito1">0</span>
+                    </button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight"
+                        aria-labelledby="offcanvasNavbarLightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Carrito de Compras</h5>
+                            <button type="button" id="cerrar-carrito" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body">
+
+                            <div class=" order-md-last">
+                                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-primary">Pedido</span>
+                                    <span class="badge bg-primary rounded-pill" id="contadorCarrito2">0</span>
+                                </h4>
+                                <ul class="list-group mb-3">
+                                    <div id="contenedorCarrito">
+                                        <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
+                                            <div>
+                                                <h6 class="my-0">Comida</h6>
+                                            </div>
+                                            <i class="bi bi-trash"></i>
+                                            <span class="text-muted">S./5</span>
+                                        </li> -->
+                                    </div>
+                                    <li class="list-group-item d-flex justify-content-between bg-light">
+                                        <div class="text-success">
+                                            <h6 class="my-0">IGV</h6>
+                                        </div>
+                                        <span class="text-success">−S./<span id="igv">0</span>%</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Total (SOLES)
+                                        </span>                                        
+                                        <strong><span id="precioTotal">0</span></strong>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        <!--  TITULO  -->
+        <section class="pt-5 text-center container">
+            <div class="row py-2 pt-5 lg-5 mt-3 my-1">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1>Comidas</h1>
+                    <p class="lead text-muted">Something short and leading about the collection below—its contents,
+                        the creator, etc.</p>
+                        <select class="form-select" id="seleccionTipoDeConsumo" aria-label="Default select example">
+                            <option selected>Abrir la selección de menú</option>
+                            <option value="all">Todos los tipos</option>
+                            <option value="comida">Comidas</option>
+                            <option value="postre">Postres</option>
+                            <option value="bebida">Bebidas</option>
+                        </select>
+                    </div>
+                </div>
+                <!--  FILTRAR  -->
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <div class="row mb-3">
+                        <div class="col-lg-5">
+                            <input type="number" id="desde" class="form-control" placeholder="Desde S./ (soles)">
+                        </div>
+                        <div class="col-lg-5">
+                            <input type="number" id="hasta" class="form-control" placeholder="Hasta S./ (soles)">
+                        </div>
+                        <button id="filtrando" class="btn btn-success col-lg-2">Filtrar</button>
+                    </div>
+                </div>
+
+        </section>
+
+        <!--  ALBUM  -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"  id="contenedor-productos">
+            <!-- <div class="col platos">
+                <div class="card shadow-sm">
+                    <img src="img/comidas/Arroz-chaufa.webp" alt="">
+                    <div class="card-body">
+                        <h5>Arroz chaufa</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-primary my-2">Añadir al carrito</a>
+                            </div>
+                            <small class="text-muted">S./10</small>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <div class="container text-center my-5">
+        <footer class="mt-auto text-black-50">
+            <p>Cover template for <a href="https://getbootstrap.com/" class="text-black">Bootstrap</a>, by <a
+                    href="https://twitter.com/mdo" class="text-black">@mdo</a>.</p>
+        </footer>
+    </div>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+</html>
