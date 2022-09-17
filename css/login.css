@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+  background-color: #f8f9fa !important;
     color: rgb(43, 43, 43);
   }
   
@@ -70,4 +70,10 @@ body {
   width: 80px;
   height: 80px;
   /* border-radius: 50%; */
+}
+
+/*==  inicio session ==*/
+.contenido {
+  position: relative !important;
+  top: 80px !important;
 }

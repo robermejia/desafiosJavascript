@@ -3,7 +3,7 @@ html {
   overflow:scroll !important;
 }
 body {
-  background-image: linear-gradient(180deg, rgb(255, 255, 255), #fff 100px, #fff);
+  background-color: #f8f9fa !important;
   color: rgb(43, 43, 43);
   /* overflow: hidden !important; */
 }
@@ -35,16 +35,17 @@ body {
   user-select: none;
 }
 
-.header-personalizado {
-    background-image: linear-gradient(180deg, rgb(255, 255, 255), #fff 100px, #fff) !important;
-    color: rgb(43, 43, 43);
-    height: 72px !important;
-}
-
 #contadorCarrito1 {
-  padding-left: 8px !important;
+  padding-left: 10px !important;
+}
+.btn-carrito{
+  width: 80px !important;
+  padding-left: 10px !important;
 }
 
+.menu-fondo {
+  background-color: #fff !important;
+}
 /* ////////////////////////////// CARRITO ////////////////////////////// */
 .alto-input{
   height: 35px !important;

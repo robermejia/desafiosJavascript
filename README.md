@@ -1,7 +1,7 @@
 # Proyecto CoderHouse
 Proyecto subido el día 10/09/2022 para el curso de Javascript.
 
-## Enlace de Proyecto desde GitHub Pages
+## Enlace de Proyecto desde GitHub Pages (rama master)
 - [Enlace de proyecto](https://robermejia.github.io/desafiosJavascript/)
 
 ## Construido con
