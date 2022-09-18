@@ -17,13 +17,14 @@ body {
 .contenido{
   /* display: flex !important; */
   /* align-items: center !important; */
-  height: 100vh !important;
+  position: relative !important;
+  top: 50px !important;
+  height: 90vh !important;
 }
 
 .footerino {
-  position: absolute !important;
+  position: relative !important;
   bottom: 0px !important;
-  right: 10% !important;
 }
 
 
